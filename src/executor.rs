@@ -27,6 +27,7 @@ pub struct TaskFuture {
 
 impl ArcWake for Task {
     fn wake_by_ref(arc_self: &Arc<Self>) {
+        println!("Waking!");
         arc_self.schedule();
     }
 }
